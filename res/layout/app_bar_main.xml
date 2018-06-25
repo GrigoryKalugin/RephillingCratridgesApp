@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.a1.iturapp.MainActivity"
+    android:id="@+id/main_root">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main"
+        android:id="@+id/main_include"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:backgroundTint="@color/call_me"
+        app:fabSize="normal"
+        app:layout_anchor="@id/main_include"
+        app:layout_anchorGravity="bottom|end"
+        app:rippleColor="@color/cardview_shadow_start_color"
+        app:srcCompat="@android:drawable/ic_menu_call" />
+
+    <include layout="@layout/call_us_include"
+        android:id="@+id/include" />
+
+    <RelativeLayout
+        android:id="@+id/main_no_conn_btn_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:background="@color/colorWhite"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="bottom|center_horizontal">
+
+        <ImageButton
+            android:id="@+id/main_no_conn_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_popup_sync" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/main_no_conn_btn"
+            android:layout_centerVertical="true"
+            android:textSize="16dp"
+            android:text="@string/error_reconnect"/>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

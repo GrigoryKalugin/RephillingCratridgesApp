@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:background="@color/colorWhite"
+    tools:context="com.example.a1.iturapp.u_zakaz">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/u_zakaz_contact"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/u_zakaz_contact_faq_1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="1dp"
+            android:text="@string/u_zakaz_contact_faq_2"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="1dp"
+            android:padding="8dp"
+            android:background="@drawable/edittext_back">
+
+            <TextView
+                android:id="@+id/zakaz_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/u_zakaz_name"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp" />
+            <TextView
+                android:id="@+id/zakaz_name_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/zakaz_name"
+                android:text="@string/ness"
+                android:textSize="12dp" />
+            <TextView
+                android:id="@+id/zakaz_name_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/image_zakaz_name"
+                android:layout_below="@+id/zakaz_name_edit"
+                android:text="@string/error_no_name"
+                android:textColor="@color/colorWhiteSimple"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/image_zakaz_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/zakaz_name"
+                android:layout_margin="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                app:srcCompat="@drawable/ic_face_white_24dp" />
+
+            <EditText
+                android:id="@+id/zakaz_name_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/image_zakaz_name"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="8dp"
+                android:layout_below="@+id/zakaz_name"
+                android:padding="8dp"
+                android:minEms="15"
+                android:background="@drawable/edittext_back_white"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp"
+            android:padding="8dp"
+            android:background="@drawable/edittext_back">
+
+            <TextView
+                android:id="@+id/zakaz_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/u_zakaz_phone"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp" />
+            <TextView
+                android:id="@+id/zakaz_phone_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/zakaz_phone"
+                android:text="@string/oneof"
+                android:textSize="12dp" />
+            <TextView
+                android:id="@+id/zakaz_phone_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/image_zakaz_phone"
+                android:layout_below="@+id/zakaz_phone_edit"
+                android:text="@string/error_no_correct_phone"
+                android:textColor="@color/colorWhiteSimple"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/image_zakaz_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/zakaz_phone"
+                android:layout_margin="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                app:srcCompat="@drawable/ic_phone_android_black_24dp" />
+
+            <EditText
+                android:id="@+id/zakaz_phone_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/zakaz_phone"
+                android:layout_toRightOf="@id/image_zakaz_phone"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="8dp"
+                android:padding="8dp"
+                android:maxLength="13"
+                android:minEms="15"
+                android:inputType="phone"
+                android:textSize="16dp"
+                android:background="@drawable/edittext_back_white"
+                android:text="@string/u_zakaz_phone_edit"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp"
+            android:padding="8dp"
+            android:background="@drawable/edittext_back">
+
+            <TextView
+                android:id="@+id/zakaz_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/u_zakaz_email"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp" />
+            <TextView
+                android:id="@+id/zakaz_email_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/zakaz_email"
+                android:layout_marginLeft="3dp"
+                android:text="@string/oneof"
+                android:textSize="12dp" />
+            <TextView
+                android:id="@+id/zakaz_email_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/image_zakaz_email"
+                android:layout_below="@+id/zakaz_email_edit"
+                android:text="@string/error_no_correct_email"
+                android:textColor="@color/colorWhiteSimple"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/image_zakaz_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/zakaz_email"
+                android:layout_margin="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                app:srcCompat="@drawable/ic_email_white_24dp" />
+
+            <EditText
+                android:id="@+id/zakaz_email_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/zakaz_email"
+                android:layout_toRightOf="@id/image_zakaz_email"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="8dp"
+                android:padding="8dp"
+                android:minEms="15"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edittext_back_white"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp"
+            android:padding="8dp"
+            android:background="@drawable/edittext_back">
+
+            <TextView
+                android:id="@+id/zakaz_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/u_zakaz_adress"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp" />
+            <TextView
+                android:id="@+id/zakaz_address_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/zakaz_address"
+                android:text="@string/ness"
+                android:textSize="12dp" />
+            <TextView
+                android:id="@+id/zakaz_address_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/image_zakaz_address"
+                android:layout_below="@+id/zakaz_address_edit"
+                android:text="@string/error_no_address"
+                android:textColor="@color/colorWhiteSimple"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/image_zakaz_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/zakaz_address"
+                android:layout_margin="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                app:srcCompat="@drawable/ic_explore_black_24dp" />
+
+            <EditText
+                android:id="@+id/zakaz_address_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/zakaz_address"
+                android:layout_toRightOf="@id/image_zakaz_address"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="8dp"
+                android:padding="8dp"
+                android:minEms="15"
+                android:background="@drawable/edittext_back_white"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/u_zakaz_spisok"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/colorAccent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/Zak_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:headerDividersEnabled="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="none">
+    </android.support.v7.widget.RecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/zakaz_summa_z_rl"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/zakaz_summa_z_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="8dp"
+                android:text="@string/u_zakaz_summa_z"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"/>
+
+        </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+        <TextView
+            android:id="@+id/zakaz_zakaz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/u_zakaz_zakaz"
+            android:textSize="16dp"
+            android:textColor="@color/colorBlack"/>
+
+        <EditText
+            android:id="@+id/zakaz_zakaz_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/zakaz_zakaz"
+            android:padding="8dp"
+            android:inputType="textMultiLine"
+            android:minEms="15"
+            android:textSize="16dp"
+            android:textColor="@color/colorBlack"/>
+
+        </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/u_zakaz_shipping"
+            android:textColor="@color/colorBlack"
+            android:textSize="20dp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/colorAccent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="24dp">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/zakaz_radio_selfv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/u_zakaz_shipping_var1" />
+
+                <RadioButton
+                    android:id="@+id/zakaz_radio_courier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/u_zakaz_shipping_var2" />
+
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="24dp">
+
+                <TextView
+                    android:id="@+id/zakaz_regions_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="@string/u_zakaz_regions_header"/>
+
+                <Spinner
+                    android:id="@+id/zakaz_regions_spinner"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:padding="5dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_below="@+id/zakaz_regions_header"
+                    android:background="@drawable/main_header_grad"/>
+
+                <TextView
+                    android:id="@+id/zakaz_regions_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/zakaz_regions_spinner"
+                    android:text="@string/u_zakaz_regions_free"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/zakaz_summa_all_rl"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/zakaz_summa_all_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="8dp"
+                android:text="@string/u_zakaz_summa_all"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/oplata_i_dostavka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingRight="8dp"
+            android:textSize="10dp"
+            android:text="@string/oplata_i_dostavka"/>
+
+        <RelativeLayout
+            android:id="@+id/zakaz_send_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:alpha="50"
+            android:layout_margin="16dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@drawable/main_header_grad">
+
+            <ImageView
+                android:id="@+id/send_photo_gallery_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_local_grocery_store_black_24dp"/>
+
+            <TextView
+                android:id="@+id/send_photo_gallery_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="#000000"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/send_photo_gallery_image"
+                android:text="@string/question_button"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

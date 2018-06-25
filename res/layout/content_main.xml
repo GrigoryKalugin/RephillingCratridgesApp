@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.a1.iturapp.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    android:focusableInTouchMode="true"
+    android:background="@color/colorWhite">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.036">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="314dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_table"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/linearLayout"
+        android:paddingBottom="8dp"
+        android:elevation="15dp"
+        app:layout_constraintHorizontal_bias="0.5">
+
+        <TextView
+            android:id="@+id/text_viberite_prntr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/title_main_prntr" />
+
+        <Spinner
+            android:id="@+id/spinner_proizvoditel"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:progressDrawable="@drawable/progressbar_main"
+            android:layout_below="@+id/text_viberite_prntr"
+            android:background="@drawable/main_header_grad" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_poizv"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@+id/spinner_proizvoditel"
+            android:max="5" />
+
+        <Spinner
+            android:id="@+id/spinner_seria"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:progressDrawable="@drawable/progressbar_main"
+            android:layout_below="@+id/progress_bar_poizv"
+            android:background="@drawable/main_header_grad" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_seria"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@+id/spinner_seria"
+            android:max="5" />
+
+        <Spinner
+            android:id="@+id/spinner_model"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:progressDrawable="@drawable/progressbar_main"
+            android:layout_below="@+id/progress_bar_seria"
+            android:background="@drawable/main_header_grad" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_model"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="16dp"
+            android:layout_below="@+id/spinner_model"
+            android:max="5" />
+
+
+        <Button
+            android:id="@+id/btnFind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/main_header_grad_find"
+            android:paddingRight="35dp"
+            android:paddingLeft="35dp"
+            android:text="@string/main_btn_find"
+            android:textColor="@color/colorWhiteSimple"
+            android:layout_below="@+id/progress_bar_model"
+            android:elevation="8dp"
+            android:onClick="FindPrinter"/>
+
+        <TextView
+            android:id="@+id/text_ili"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="3dp"
+            android:layout_below="@+id/btnFind"
+            android:text="Не знаете модель?" />
+
+        <Button
+            android:id="@+id/btnPrnPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/main_header_grad_find"
+            android:text="@string/main_btn_send_photo"
+            android:textColor="@color/colorWhiteSimple"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@+id/text_ili"
+            android:elevation="8dp"
+            android:onClick="SendPhoto"/>
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/Grid_Buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:layout_marginRight="32dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        tools:layout_editor_absoluteX="33dp">
+
+        <LinearLayout
+            android:id="@+id/btnAbout"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            style="@android:style/Widget.Button"
+            android:layout_gravity="left"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/main_header_grad"
+            android:elevation="3dp"
+            android:onClick="About">
+
+            <ImageView
+                android:id="@+id/img_btn_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                app:srcCompat="@drawable/ic_store_mall_directory_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_centerVertical="true"
+                android:text="@string/main_find_us1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_centerVertical="true"
+                android:text="@string/main_find_us2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnRepair"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            style="@android:style/Widget.Button"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/main_header_grad"
+            android:elevation="3dp"
+            android:onClick="repairDialog">
+
+            <ImageView
+                android:id="@+id/img_btn_repair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="3dp"
+                app:srcCompat="@drawable/ic_build_black_48dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_centerVertical="true"
+                android:text="@string/main_repair1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_centerVertical="true"
+                android:text="@string/main_repair2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnCourier"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            style="@android:style/Widget.Button"
+            android:layout_gravity="right"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="18dp"
+            android:text="Вызвать курьера"
+            android:background="@drawable/main_header_grad"
+            android:elevation="3dp"
+            android:onClick="KZakazu">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                app:srcCompat="@drawable/ic_local_shipping_black_48dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_centerVertical="true"
+                android:text="@string/main_courier1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_centerVertical="true"
+                android:text="@string/main_courier2" />
+        </LinearLayout>
+    </GridLayout>
+
+    </RelativeLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
